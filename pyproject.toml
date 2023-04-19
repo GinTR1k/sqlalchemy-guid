@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "sqlalchemy-guid"
+version = "1.0.1"
+description = ""
+authors = ["Alexander Karateev <administrator@gintr1k.space>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "sqlalchemy_guid"}]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+sqlalchemy = ">1.0,<3.0"
+
+[tool.poetry.group.dev.dependencies]
+faker = "*"
+pytest = "*"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
