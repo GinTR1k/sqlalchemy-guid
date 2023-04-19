@@ -1,11 +1,12 @@
 [tool.poetry]
 name = "sqlalchemy-guid"
-version = "1.0.1"
+version = "1.0.2"
 description = ""
 authors = ["Alexander Karateev <administrator@gintr1k.space>"]
 license = "MIT"
 readme = "README.md"
 packages = [{include = "sqlalchemy_guid"}]
+urls = {Source = "https://github.com/gintr1k/sqlalchemy-guid"}
 
 [tool.poetry.dependencies]
 python = "^3.7"
