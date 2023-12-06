@@ -5,7 +5,7 @@ from sqlalchemy import CHAR, UUID, Dialect, TypeDecorator
 from sqlalchemy.dialects import postgresql
 from sqlalchemy.sql.type_api import TypeEngine
 
-_T = Type['_T']
+_T = TypeVar['_T']
 
 
 class GUID(TypeDecorator):
@@ -36,7 +36,7 @@ class GUID(TypeDecorator):
         if value is None:
             return value
         if not isinstance(value, uuid.UUID):
-            value = uuid.UUID(value)
+            return uuid.UUID(value)
         return value
 
     def process_result_value(self, value: _T, dialect: Dialect) -> Union[uuid.UUID, _T]:
